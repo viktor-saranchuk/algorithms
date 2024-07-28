@@ -1,7 +1,13 @@
+/**
+ * Best case: O(n)
+ * Average case: O(n^2)
+ * Worst case: O(n^2) 
+ */
 export default function sort(arr) {
     if (!Array.isArray(arr)) {
         throw new Error('Argument is not an Array');
     }
+    
     insert(arr);
 }
 
