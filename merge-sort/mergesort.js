@@ -18,9 +18,9 @@ const merge = (arr) => {
 
     const middle = Math.floor(arr.length / 2);
 
-    const arr1 = arr.slice(0, middle);
+    const arr1 = arr.slice(0, middle); // replaced for loop to copy array from 0 to middle
     merge(arr1);
-    const arr2 = arr.slice(middle, arr.length);
+    const arr2 = arr.slice(middle, arr.length); // replaced for loop to copy array from middle till the last one element
     merge(arr2);
 
     let i = 0, j = 0, k = 0;
