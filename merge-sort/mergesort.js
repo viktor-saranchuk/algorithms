@@ -9,6 +9,8 @@ export default function mergesort(arr) {
     }
 
     merge(arr);
+
+    return arr;
 }
 
 const merge = (arr) => {
@@ -18,9 +20,17 @@ const merge = (arr) => {
 
     const middle = Math.floor(arr.length / 2);
 
-    const arr1 = arr.slice(0, middle); // replaced for loop to copy array from 0 to middle
+    const arr1 = [];
+    for (let i = 0; i < middle; i++) {
+        arr1[i] = arr[i];
+    }
     merge(arr1);
-    const arr2 = arr.slice(middle, arr.length); // replaced for loop to copy array from middle till the last one element
+    
+    const arr2 = [];
+    for (let i = middle; i < arr.length; i++) {
+        arr2[i-middle] = arr[i];
+    }
+
     merge(arr2);
 
     let i = 0, j = 0, k = 0;
